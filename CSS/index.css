@@ -39,10 +39,26 @@ header > .logo {
     flex-shrink: 0;
 }
 
-header > h1 {
+.menu { 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+header > .menu > h1 {
     font-family: var(--fonttitulos);
     font-size: 3em;
     color: var(--azul);
+}
+
+.menu > i {
+    color: var(--azul);
+    cursor: pointer;
+}
+
+.menu > i:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
 }
 
 .user {
@@ -68,6 +84,7 @@ header > h1 {
     background-size: contain;
     margin-right: 10px;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .user > .photo:hover {
@@ -76,8 +93,102 @@ header > h1 {
     box-shadow: 1px 1px 2px var(--azul);
 }
 
+nav {
+    display: none;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--amarelo);
+}
+
+nav > a {
+    color: var(--azul);
+    text-decoration: none;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-family: var(--fontdoc);
+}
+
+nav > a > i {
+    margin-right: 3px;
+}
+
+nav > a:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+#perfilUser {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: 190px;
+    height: 160px;
+    border-radius: 20px;
+    border: 1px solid var(--azul);
+    background-color: var(--amarelo);
+}
+
+#perfilUser > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--azul);
+    font-family: var(--fontdoc);
+}
+
+#perfilUser > a > i {
+    margin-right: 3px;
+}
+
+#perfilUser > a:hover {
+    transform: scale(1.1);
+}
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 100px;
+}
+
+th {
+    border: 2px solid white;
+    padding: 10px;
+    font-family: var(--fontdoc);
+    color: var(--azul);
+    background-color: var(--amarelo);
+}
+
+td {
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+    font-family: var(--fontdoc);
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+
 @media(max-width: 650px){
+    header > .logo {
+        display: none;
+    }
+
+    header > .menu {
+        margin-left: 10px;
+    }
+
     .user > span {
         display: none;
+    }
+
+    nav {
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--amarelo);
     }
 }

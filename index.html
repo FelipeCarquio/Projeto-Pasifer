@@ -12,15 +12,53 @@
     <div class="container">
         <header>
             <div class="logo"></div>
-            <h1>RH Pasifer</h1>
+            <div class="menu">
+                <h1>RH Pasifer</h1>
+                <i class="fa-solid fa-bars" onclick="menu()"></i>
+            </div>
             <div class="user">
                 <span class="name">Olá! Viviane</span>
-                <div class="photo"></div>
+                <div class="photo" onclick="perfil()"></div>
             </div>
         </header>
+        <nav id="links">
+            <a href="#"><i class="fa-solid fa-stethoscope"></i>Atestado</a>
+            <a href="#"><i class="fa-solid fa-heart-pulse"></i>ASO</a>
+            <a href="#"><i class="fa-solid fa-credit-card"></i>Benefícios</a>
+            <a href="#"><i class="fa-solid fa-shirt"></i>Uniformes</a>
+            <a href="#"><i class="fa-solid fa-user-gear"></i>Cadastro</a>
+        </nav>
+        <div id="perfilUser">
+            <a href="#"><i class="fa-solid fa-user-pen"></i>Dados Pessoais</a>
+            <a href="#"><i class="fa-solid fa-unlock-keyhole"></i>Alterar Senha</a>
+            <a href="#"><i class="fa-solid fa-camera"></i>Mudar Foto</a>
+            <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</a>
+        </div>
         <main>
-            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Setor</th>
+                        <th scope="col">Período</th>
+                        <th scope="col">Observação</th>
+                        <th scope="col">CID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>03/02/2025</td>
+                        <td>Carlos Alberto Da Conceicao Chabaribery</td>
+                        <td>Recebimento</td>
+                        <td>1</td>
+                        <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
+                        <td>M751</td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
     </div>
+    <script src="JavaScript/index.js"></script>
 </body>
 </html>
