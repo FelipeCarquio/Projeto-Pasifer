@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/atestado.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <title>RH Pasifer</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <div class="menu">
+                <h1>RH Pasifer</h1>
+                <i class="fa-solid fa-bars" onclick="menu()"></i>
+            </div>
+            <div class="user">
+                <span class="name">Olá! Viviane</span>
+                <div class="photo" onclick="perfil()"></div>
+            </div>
+        </header>
+        <nav id="links">
+            <a href="#"><i class="fa-solid fa-stethoscope"></i>Atestado</a>
+            <a href="#"><i class="fa-solid fa-heart-pulse"></i>ASO</a>
+            <a href="#"><i class="fa-solid fa-credit-card"></i>Benefícios</a>
+            <a href="#"><i class="fa-solid fa-shirt"></i>Uniformes</a>
+            <a href="#"><i class="fa-solid fa-user-gear"></i>Cadastro</a>
+        </nav>
+        <div id="perfilUser">
+            <a href="#"><i class="fa-solid fa-user-pen"></i>Dados Pessoais</a>
+            <a href="#"><i class="fa-solid fa-unlock-keyhole"></i>Alterar Senha</a>
+            <a href="#"><i class="fa-solid fa-camera"></i>Mudar Foto</a>
+            <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</a>
+        </div>
+        <main>
+            <div class="cadastro" data-modal="cadastroModal">
+                <span><i class="fa-solid fa-user-plus"></i>Cadastrar</span>
+            </div>
+            <div class="excluir">
+                <span><i class="fa-solid fa-user-minus"></i>Remover</span>
+            </div>
+            <div class="table-resp">
+                <table>
+                    <caption>Atestados</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Setor</th>
+                            <th scope="col">Período</th>
+                            <th scope="col">Observação</th>
+                            <th scope="col">CID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>03/02/2025</td>
+                            <td>Carlos Alberto Da Conceicao Chabaribery</td>
+                            <td>Recebimento</td>
+                            <td>1</td>
+                            <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
+                            <td>M751</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <dialog id="cadastroModal">
+                <div class="close" data-modal="cadastroModal">
+                   <i class="fa-solid fa-xmark"></i>
+                </div>
+            </dialog>
+        </main>
+    </div>
+    <script src="JavaScript/atestado.js"></script>
+</body>
+</html>

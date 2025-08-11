@@ -9,7 +9,7 @@
     --fontdoc: 'Roboto';
 }
 
-* {
+*:not(dialog) {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -129,6 +129,7 @@ nav > a:hover {
     border-radius: 20px;
     border: 1px solid var(--azul);
     background-color: var(--amarelo);
+    z-index: 1;
 }
 
 #perfilUser > a {
@@ -146,14 +147,77 @@ nav > a:hover {
     transform: scale(1.1);
 }
 
+main {
+    position: relative;
+}
+
+.cadastro {
+    color: var(--azul);
+    position: absolute;
+    top: 20px;
+    left: 81px;
+    cursor: pointer;
+}
+
+.cadastro > span {
+    border: 1px solid var(--amarelo);
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--amarelo);
+    font-family: var(--fontdoc)
+}
+
+.cadastro > span > i {
+    margin-right: 8px;
+}
+
+.cadastro:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .3s;
+    font-weight: bold;
+}
+
+.excluir {
+    color: var(--azul);
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    cursor: pointer;
+}
+
+.excluir > span {
+    border: 1px solid var(--amarelo);
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--amarelo);
+    font-family: var(--fontdoc)
+}
+
+.excluir > span > i {
+    margin-right: 8px;
+}
+
+.excluir:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .3s;
+    font-weight: bold;
+}
+
 table{
     border-collapse: collapse;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
+    width: 1200px;
+}
+
+caption {
+    font-family: var(--fonttitulos);
+    color: var(--amarelo);
+    font-size: 2.5em;
 }
 
 th {
-    border: 2px solid white;
+    border: 2px solid #62733D;
     padding: 10px;
     font-family: var(--fontdoc);
     color: var(--azul);
@@ -161,12 +225,29 @@ th {
 }
 
 td {
-    border: 2px solid white;
+    border: 2px solid #62733D;
     text-align: center;
     color: white;
     font-family: var(--fontdoc);
     font-size: 12px;
-    padding: 10px;
+    padding: 5px;
+}
+
+dialog {
+    width: 800px;
+    height: 500px;
+    background-color: var(--azul);
+    border-radius: 10px;
+}
+
+dialog > div.close {
+    float: right;
+    cursor: pointer;
+    color: var(--amarelo);
+}
+
+dialog::backdrop {
+    background-color: rgba(92, 92, 92, 0.76);
 }
 
 
@@ -191,4 +272,27 @@ td {
     width: 100vw;
     background-color: var(--amarelo);
     }
+}
+
+@media(max-width: 1200px){
+    .table-resp {
+        overflow-x: scroll;
+    }
+    
+    .cadastro {
+        color: var(--azul);
+        position: absolute;
+        top: 70px;
+        left: 81px;
+        cursor: pointer;
+    }
+
+    .excluir {
+        color: var(--azul);
+        position: absolute;
+        top: 70px;
+        left: 210px;
+        cursor: pointer;
+    }
+
 }
