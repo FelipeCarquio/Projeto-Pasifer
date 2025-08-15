@@ -57,19 +57,102 @@
                     <tbody>
                         <tr>
                             <td>03/02/2025</td>
-                            <td>Carlos Alberto Da Conceicao Chabaribery</td>
+                            <td>Carlos Antonio Da Conceicao Camargo</td>
                             <td>Recebimento</td>
-                            <td>1</td>
+                            <td>1 dia</td>
                             <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
                             <td>M751</td>
+                        </tr>
+                        <tr>
+                            <td>14/08/2025</td>
+                            <td>Lucas Henrique Almeida Silva</td>
+                            <td>Manutenção</td>
+                            <td>7 dias</td>
+                            <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
+                            <td>A00</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <dialog id="cadastroModal">
                 <div class="close" data-modal="cadastroModal">
-                   <i class="fa-solid fa-xmark"></i>
+                   <i class="fa-solid fa-xmark" id="fechar"></i>
                 </div>
+                <h1>Cadastrar Atestado</h1>
+                <form action="" method="post" autocomplete="on">
+                    <div class="nomeates">
+                        <label for="inomeates">Nome:</label>
+                        <input type="text" id="inomeates">
+                    </div>
+                    <div class="blocoates1">
+                        <div class="dataates">
+                            <label for="idata">Data:</label>
+                            <input type="date" id="idata">
+                        </div>
+                        <div class="periodoates">
+                            <label for="iperiodoates">Período:</label>
+                            <input type="text" id="iperiodoates">
+                        </div>
+                        <div class="cidates">
+                            <label for="icid">CID-10:</label>
+                            <select id="icid">
+                                <option value="">...</option>
+                                <option value="A00">A00</option>
+                                <option value="A01">A01</option>
+                                <option value="A02">A02</option>
+                                <option value="A03">A03</option>
+                                <option value="A04">A04</option>
+                                <option value="A05">A05</option>
+                                <option value="A06">A06</option>
+                                <option value="A07">A07</option>
+                                <option value="A08">A08</option>
+                                <option value="A09">A09</option>
+                                <option value="A15">A15</option>
+                                <option value="A16">A16</option>
+                                <option value="A17">A17</option>
+                                <option value="A18">A18</option>
+                                <option value="A19">A19</option>
+                                <option value="A20">A20</option>
+                                <option value="A21">A21</option>
+                                <option value="A22">A22</option>
+                                <option value="A23">A23</option>
+                                <option value="A24">A24</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="blocoates2">
+                        <div class="setorates">
+                            <label for="isetor">Setor:</label>
+                            <select id="isetor">
+                                <option value="">Selecione...</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Almoxarifado">Almoxarifado</option>
+                                <option value="Compras">Compras</option>
+                                <option value="Expedição">Expedição</option>
+                                <option value="Faturamento">Faturamento</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="Limpeza">Limpeza</option>
+                                <option value="Logistica">Logistica</option>
+                                <option value="Manutenção">Manutenção</option>
+                                <option value="PCP">PCP</option>
+                                <option value="Planos">Planos</option>
+                                <option value="Projetos">Projetos</option>
+                                <option value="Recebimento">Recebimento</option>
+                                <option value="Recepção">Recepção</option>
+                                <option value="Retalhos">Retalhos</option>
+                                <option value="RH">RH</option>
+                                <option value="Serra">Serra</option>
+                                <option value="Suporte">Suporte</option>
+                                <option value="Vendas">Vendas</option>
+                            </select>
+                        </div>
+                        <div class="obsates">
+                            <label for="iobs">Obs:</label>
+                            <input type="text" id="iobs">
+                        </div>
+                    </div>
+                    <input type="submit" value="Cadastrar">
+                </form>
             </dialog>
         </main>
     </div>

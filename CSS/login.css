@@ -138,25 +138,13 @@ form {
     color: var(--amarelo);
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .button > input[type=submit]:hover {
     transform: scale(1.05);
     transition: transform .5s;
     box-shadow: 2px 2px 3px var(--azul);
-}
-
-form > span,.singup {
-    text-decoration: none;
-    font-family: var(--fontdoc);
-    font-size: 12px;
-    color: var(--azul);
-    margin-top: 20px;
-}
-
-.singup:hover {
-    text-decoration: underline;
 }
 
 footer {

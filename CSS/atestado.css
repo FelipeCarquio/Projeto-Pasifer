@@ -234,23 +234,200 @@ td {
 }
 
 dialog {
-    width: 800px;
-    height: 500px;
+    width: 550px;
+    height: 250px;
     background-color: var(--azul);
     border-radius: 10px;
 }
 
 dialog > div.close {
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     color: var(--amarelo);
+}
+
+dialog > .close:hover {
+    transform: scale(1.1);
 }
 
 dialog::backdrop {
     background-color: rgba(92, 92, 92, 0.76);
 }
 
+dialog > h1 {
+    text-align: center;
+    color: var(--amarelo);
+    font-family: var(--fonttitulos);
+    margin-bottom: 10px;
+}
 
+dialog > form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.nomeates {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+    margin-bottom: 15px;
+}
+
+.nomeates > label {
+    margin-right: 3px;
+}
+
+.nomeates > input {
+    width: 100%;
+    height: 30px;
+    font-family: var(--fontdoc);
+    color: var(--azul);
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.blocoates1 {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.blocoates1 > .dataates > label {
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+    margin-right: 8px;
+}
+
+.blocoates1 > .dataates > input {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: var(--fontdoc);
+    font-size: 0.9em;
+    color: var(--azul);
+    padding-left: 5px;
+}
+
+.blocoates1 > .periodoates > label {
+    color: var(--amarelo);
+    font-family: var(--fontdoc);
+    margin-right: 3px;
+}
+
+.blocoates1 > .periodoates > input {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fontdoc);
+    font-size: 0.9em;
+    color: var(--azul);
+    padding-left: 5px;
+}
+
+.blocoates1 > .cidates > label {
+    color: var(--amarelo);
+    font-family: var(--fontdoc);
+    margin-right: 3px;
+}
+
+.blocoates1 > .cidates > select {
+    width: 60px;
+    height: 30px;
+    color: var(--azul);
+    font-family: var(--fontdoc);
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.blocoates2 {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.blocoates2 > .setorates {
+    width: 48%;
+}
+
+.blocoates2 > .setorates > label {
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+    margin-right: 3px;
+}
+
+.blocoates2 > .setorates > select {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    font-family: var(--fontdoc);
+    color: var(--azul);
+}
+
+.blocoates2 > .obsates {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.blocoates2 > .obsates > label {
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+    margin-right: 5px;
+}
+
+.blocoates2 > .obsates > input {
+    width: 100%;
+    height: 30px;
+    color: var(--azul);
+    font-family: var(--fontdoc);
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+}
+
+form > input[type=submit] {
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--amarelo);
+    color: var(--azul);
+    font-family: var(--fontdoc);
+    margin-top: 28px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
 
 @media(max-width: 650px){
     header > .logo {
