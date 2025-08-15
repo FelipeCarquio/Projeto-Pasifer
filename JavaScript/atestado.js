@@ -35,3 +35,25 @@ const openButtons = document.querySelectorAll('.cadastro');
          modal.close();
     });
  });
+
+ const openButton = document.querySelectorAll('.excluir');
+
+ openButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+         modal.showModal();
+    });
+ });
+
+  const closeButton = document.querySelectorAll('.naoexcluir');
+
+ closeButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+
+         modal.close();
+    });
+ });

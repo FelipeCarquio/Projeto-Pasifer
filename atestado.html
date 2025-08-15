@@ -35,12 +35,7 @@
             <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</a>
         </div>
         <main>
-            <div class="cadastro" data-modal="cadastroModal">
-                <span><i class="fa-solid fa-user-plus"></i>Cadastrar</span>
-            </div>
-            <div class="excluir">
-                <span><i class="fa-solid fa-user-minus"></i>Remover</span>
-            </div>
+            
             <div class="table-resp">
                 <table>
                     <caption>Atestados</caption>
@@ -52,6 +47,7 @@
                             <th scope="col">Período</th>
                             <th scope="col">Observação</th>
                             <th scope="col">CID</th>
+                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,19 +56,27 @@
                             <td>Carlos Antonio Da Conceicao Camargo</td>
                             <td>Recebimento</td>
                             <td>1 dia</td>
-                            <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
+                            <td>Consulta da Filha</td>
                             <td>M751</td>
+                            <td><input type="checkbox" name="" id="excluirselecao"></td>
                         </tr>
                         <tr>
                             <td>14/08/2025</td>
                             <td>Lucas Henrique Almeida Silva</td>
                             <td>Manutenção</td>
                             <td>7 dias</td>
-                            <td>Afecções da pele e do tecido subcutâneo, não especificado</td>
+                            <td>Quebrou o braço</td>
                             <td>A00</td>
+                            <td><input type="checkbox" name="" id="excluirselecao"></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="cadastro" data-modal="cadastroModal">
+                <span><i class="fa-solid fa-user-plus"></i>Cadastrar</span>
+            </div>
+            <div class="excluir" data-modal="excluiratestado">
+                <span><i class="fa-solid fa-user-minus"></i>Remover</span>
+            </div>
             </div>
             <dialog id="cadastroModal">
                 <div class="close" data-modal="cadastroModal">
@@ -152,6 +156,14 @@
                         </div>
                     </div>
                     <input type="submit" value="Cadastrar">
+                </form>
+            </dialog>
+            <dialog id="excluiratestado">
+                <h1>Excluir Atestado</h1>
+                <p>Deseja excluir o(s) Atestado(s) selecionado(s)?</p>
+                <form id="excluir" action="" method="post">
+                    <input type="submit" value="Sim">
+                    <input type="button" class="naoexcluir" data-modal="excluiratestado" value="Não">
                 </form>
             </dialog>
         </main>
