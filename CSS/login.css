@@ -139,6 +139,7 @@ form {
     border: none;
     border-radius: 5px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .button > input[type=submit]:hover {

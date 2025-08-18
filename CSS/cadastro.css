@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+:root {
+    --azul: #183766;
+    --amarelo: #ffff08;
+    --tabela: #62733D;
+    --fonttitulos: 'teko';
+    --fontdoc: 'Roboto';
+}
+
+*:not(dialog) {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--azul);
+}
+
+.headerfixo {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--amarelo);
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > .logo {
+    width: 180px;
+    height: 90px;
+    background: url(/imagens/logo-interna.png) center center no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.menu { 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+header > .menu > h1 {
+    font-family: var(--fonttitulos);
+    font-size: 3em;
+    color: var(--azul);
+}
+
+.menu > i {
+    color: var(--azul);
+    cursor: pointer;
+}
+
+.menu > i:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+.user {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.user > span {
+    font-family: var(--fontdoc);
+    font-size: 1.2em;
+    color: var(--azul);
+    padding-right: 7px;
+}
+
+.user > .photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--azul);
+    background: url(/imagens/user.jpg) center center no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.user > .photo:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .5s;
+    box-shadow: 1px 1px 2px var(--azul);
+}
+
+nav {
+    display: none;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--amarelo);
+}
+
+nav > a {
+    color: var(--azul);
+    text-decoration: none;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-family: var(--fontdoc);
+}
+
+nav > a > i {
+    margin-right: 3px;
+}
+
+nav > a:hover {
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+#perfilUser {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 90px;
+    border-radius: 20px;
+    border: 1px solid var(--azul);
+    background-color: var(--amarelo);
+    z-index: 1;
+}
+
+#perfilUser > a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--azul);
+    font-family: var(--fontdoc);
+}
+
+#perfilUser > a > i {
+    margin-right: 3px;
+}
+
+#perfilUser > a:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-family: var(--fonttitulos);
+    color: var(--amarelo);
+    font-size: 2.0em;
+    text-align: center;
+    margin-bottom: 15px;
+    position: fixed;
+    top: 140px;
+    left: 550px;
+    white-space: nowrap;
+}
+
+main > .tableresp {
+    /* overflow: scroll; */
+    margin: 200px 5px 0px 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid var(--tabela);
+    background-color: var(--amarelo);
+    color: var(--azul);
+    font-family: var(--fontdoc);
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+td {
+    border: 2px solid var(--tabela);
+    text-align: center;
+    color: white;
+    font-family: var(--fontdoc);
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 5px 15px;
+}
+
+.cadastro  {
+    color: var(--azul);
+    position: absolute;
+    top: 155px;
+    left: 8px;
+    cursor: pointer;
+    font-family: var(--fontdoc);
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--amarelo);
+}
+
+.cadastro > span > i {
+    margin-right: 8px;
+}
+
+.cadastro:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .5s;
+    font-weight: bold;
+}
+
+.demitir  {
+    color: var(--azul);
+    position: absolute;
+    top: 155px;
+    left: 195px;
+    cursor: pointer;
+    font-family: var(--fontdoc);
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--amarelo);
+}
+
+.demitir > span > i {
+    margin-right: 8px;
+}
+
+.demitir:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .5s;
+    font-weight: bold;
+}
+
+dialog {
+    width: 700px;
+    height: 500px;
+    background-color: var(--azul);
+    border-radius: 10px;
+}
+
+dialog > .close > i {
+    color: var(--amarelo);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+dialog > .close > i:hover{
+    transform: scale(1.1);
+}
+
+dialog > h1 {
+    color: var(--amarelo);
+    font-family: var(--fonttitulos);
+    text-align: center;
+}
+
+dialog label {
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+}
+dialog input, select {
+    color: var(--azul);
+    font-family: var(--fontdoc);
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+.bloco1, .bloco2 {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.bloco1 > input, .bloco2 > input {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.bloco3 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.bloco4 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.bloco4 > .funcao > input {
+    width: 250px;
+}
+
+.bloco5 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.bloco6 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.bloco7 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form  fieldset {
+    border: 2px solid var(--amarelo);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+legend {
+    color: var(--amarelo);
+    font-family: var(--fontdoc);
+}
+
+.bloco8  .escolha {
+    display: flex;
+    align-items: center;
+}
+
+.escolha > input {
+    margin-right: 8px;
+}
+
+.pix {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pix > input {
+    width: 80%;
+}
+
+.bloco8 > p {
+    font-family: var(--fontdoc);
+    color: var(--amarelo);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button > input[type=submit] {
+    width: 120px;
+    height: 40px;
+    color: var(--azul);
+    background-color: var(--amarelo);
+    font-family: var(--fontdoc);
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.button > input[type=submit]:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+    font-weight: bold;
+}
+
+dialog#mdemitir {
+    width: 550px;
+    height: 250px;
+}
+
+#mdemitir > h1 {
+    margin-bottom: 15px;
+}
+
+.demissao {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.dadosdemissao {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.dnome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.dnome > input {
+    width: 100%;
+}
+
+.local {
+    display: flex;
+    justify-content: space-between;
+}

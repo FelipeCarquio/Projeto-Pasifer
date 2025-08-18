@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    <title>RH Pasifer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="headerfixo">
+            <header>
+                <div class="logo"></div>
+                <div class="menu">
+                    <h1>RH Pasifer</h1>
+                    <i class="fa-solid fa-bars" onclick="menu()"></i>
+                </div>
+                <div class="user">
+                    <span class="name">Olá! Viviane</span>
+                    <div class="photo" onclick="perfil()"></div>
+                </div>
+            </header>
+            <nav id="links">
+                <a href="atestado.html"><i class="fa-solid fa-stethoscope"></i>Atestado</a>
+                <a href="#"><i class="fa-solid fa-heart-pulse"></i>ASO</a>
+                <a href="#"><i class="fa-solid fa-credit-card"></i>Benefícios</a>
+                <a href="#"><i class="fa-solid fa-shirt"></i>Uniformes</a>
+                <a href="#"><i class="fa-solid fa-user-gear"></i>Cadastro</a>
+            </nav>
+            <div id="perfilUser">
+                <a href="#"><i class="fa-solid fa-camera-rotate"></i>Alterar Foto</a>
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sair</a>
+            </div>
+        </div>
+        <main>
+            <h2>Cadastro de Colaborador</h2>
+            <div class="tableresp">
+                <table>
+                    <thead>
+                        <th scope="col">Matricula</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Data ASO</th>
+                        <th scope="col">Venc. ASO</th>
+                        <th scope="col">Empresa</th>
+                        <th scope="col">Função</th>
+                        <th scope="col">Salário</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">RG</th>
+                        <th scope="col">Data Nasc.</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Tel. Recado</th>
+                        <th scope="col">Setor</th>
+                        <th scope="col">Gestor</th>
+                        <th scope="col">Admissão</th>
+                        <th scope="col">Venc. Experiencia 30 dias</th>
+                        <th scope="col">Venc. Experiencia 60 dias</th>
+                        <th scope="col">Tempo de Empresa</th>
+                        <th scope="col">Última Avaliação</th>
+                        <th scope="col">Próxima Avaliação</th>
+                        <th scope="col">Último Reajuste</th>
+                        <th scope="col">PIX</th>
+                        <th scope="col">Demissão</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Carlos Antonio Da Conceicao Camargo</td>
+                            <td>Rua das Palmeiras, 123 - Sorocaba/SP</td>
+                            <td>16/08/2025</td>
+                            <td>16/09/2025</td>
+                            <td>Pasiserv Serviços administrativos ltda</td>
+                            <td>Almoxarife</td>
+                            <td>R$1.640,30</td>
+                            <td>000.000.000-00</td>
+                            <td>00.000.000-0</td>
+                            <td>30/09/1976</td>
+                            <td>(15)3416-3100</td>
+                            <td>(15)3100-5000</td>
+                            <td>Almoxarifado</td>
+                            <td>Carlos Alexandre</td>
+                            <td>30/11/2024</td>
+                            <td>25/07/2014</td>
+                            <td>25/12/2025</td>
+                            <td>2 anos</td>
+                            <td>30/10/2020</td>
+                            <td>25/11/2020</td>
+                            <td>30/12/2024</td>
+                            <td>carloscenceiao@hotmail.com</td>
+                            <td>00/00/0000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cadastro" data-modal="newcadastro">
+                <span><i class="fa-solid fa-user-plus"></i>Novo Colaborador</span>
+            </div>
+            <div class="demitir" data-modal="mdemitir">
+                <span><i class="fa-solid fa-user-minus"></i>Demissão</span>
+            </div>
+            <dialog id="newcadastro">
+                <div class="close" data-modal="newcadastro">
+                    <i class="fa-solid fa-xmark" id="fechar"></i>
+                </div>
+                <h1>Novo Colaborador</h1>
+                <form action="" method="post" autocomplete="off">
+                    <div class="bloco1">
+                        <label for="inome">Nome:</label>
+                        <input type="text" name="nome" id="inome">
+                    </div>
+                    <div class="bloco2">
+                        <label for="iendereco">Endereço:</label>
+                        <input type="text" name="endereço" id="iendereco">
+                    </div>
+                    <div class="bloco3">
+                        <div class="aso">
+                            <label for="idataaso">Data ASO:</label>
+                            <input type="date" name="dataaso" id="idataaso">
+                        </div>
+                        <div class="empresa">
+                            <label for="iempresa">Empresa:</label>
+                            <select name="nempresa" id="iempresa">
+                                <option>Selecione...</option>
+                                <option>Pasifer Aços Especiais</option>
+                                <option>Pasifer Comércio de Ferro e Aço ltda</option>
+                                <option>Pasiserv Serviços administrativos ltda</option>
+                                <option>Roccia Serviços administrativos ltda</option>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bloco4">
+                        <div class="funcao">
+                            <label for="ifuncao">Função:</label>
+                            <input type="text" name="nfuncao" id="ifuncao">
+                        </div>
+                        <div class="salario">
+                            <label for="isalario">Salário:</label>
+                            <input type="number" name="nsalario" id="isalario">
+                        </div>
+                    </div>
+                    <div class="bloco5">
+                        <div class="cpf">
+                            <label for="icpf">CPF:</label>
+                            <input type="number" name="ncpf" id="icpf">
+                        </div>
+                        <div class="rg">
+                            <label for="irg">RG:</label>
+                            <input type="number" name="nrg" id="irg">
+                        </div>
+                        <div class="nascimento">
+                            <label for="idatanasc">Data Nasc.:</label>
+                            <input type="date" name="ndatanasc" id="idatanasc">
+                        </div>
+                    </div>
+                    <div class="bloco6">
+                        <div class="tel">
+                            <label for="itel">Tel.:</label>
+                            <input type="tel" name="ntel" id="itel">
+                        </div>
+                        <div class="telr">
+                            <label for="itelr">Tel. Emergencia:</label>
+                            <input type="tel" name="ntelr" id="itelr">
+                        </div>
+                        <div class="setor">
+                            <label for="isetor">Setor:</label>
+                            <select name="nsetor" id="isetor">
+                                <option value="">Selecione...</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Almoxarifado">Almoxarifado</option>
+                                <option value="Compras">Compras</option>
+                                <option value="Expedição">Expedição</option>
+                                <option value="Faturamento">Faturamento</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="Limpeza">Limpeza</option>
+                                <option value="Logistica">Logistica</option>
+                                <option value="Manutenção">Manutenção</option>
+                                <option value="PCP">PCP</option>
+                                <option value="Planos">Planos</option>
+                                <option value="Projetos">Projetos</option>
+                                <option value="Recebimento">Recebimento</option>
+                                <option value="Recepção">Recepção</option>
+                                <option value="Retalhos">Retalhos</option>
+                                <option value="RH">RH</option>
+                                <option value="Serra">Serra</option>
+                                <option value="Suporte">Suporte</option>
+                                <option value="Vendas">Vendas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bloco7">
+                        <div class="gestor">
+                            <label for="igestor">Gestor:</label>
+                            <select name="ngestor" id="igestor">
+                                <option>Selecione...</option>
+                                <option>José</option>
+                                <option>Antonio</option>
+                                <option>Joaquim</option>
+                                <option>João</option>
+                            </select>
+                        </div>
+                        <div class="admissao">
+                            <label for="iadmissao">Data Admissão</label>
+                            <input type="date" name="nadmissao" id="iadmissao">
+                        </div>
+                        <div class="ureajuste">
+                            <label for="ireajuste">Último Reajuste:</label>
+                            <input type="date" name="nreajuste" id="ireajuste">
+                        </div>
+                    </div>
+                    <div class="bloco8">
+                        <fieldset>
+                            <legend>PIX</legend>
+                            <div class="escolha">
+                                <label for="ipixemail">E-mail:</label>
+                                <input type="radio" name="chavepix" id="ipixemail">
+                                <label for="ipixtel">Celular:</label>
+                                <input type="radio" name="chavepix" id="ipixtel">
+                                <label for="ipixcpf">CPF:</label>
+                                <input type="radio" name="chavepix" id="ipixcpf">
+                            </div>
+                            <div class="pix">
+                                <label for="ipix">Chave Pix:</label>
+                                <input type="text" name="npix" id="ipix">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </dialog>
+            <dialog id="mdemitir">
+                <div class="close" data-modal="mdemitir">
+                    <i class="fa-solid fa-xmark" id="fechar"></i>
+                </div>
+                <h1>Cadastrar Demissão</h1>
+                <form action="" method="post" class="demissao">
+                    <div class="dadosdemissao">
+                        <div>
+                            <label for="dmatricula">Matricula:</label>
+                            <input type="number" name="dmatricula" id="dmatricula">
+                        </div>
+                        <div>
+                            <label for="ddata">Data Demissão:</label>
+                            <input type="date" name="ddata" id="ddata">
+                        </div>
+                    </div>
+                    <div class="dnome">
+                        <label for="dnome">Nome:</label>
+                        <input type="text" name="dnome" id="dnome" disabled>
+                    </div>
+                    <div class="local">
+                        <div>
+                            <label for="dfuncao">Função:</label>
+                            <input type="text" name="dfuncao" id="dfuncao" disabled>
+                        </div>
+                        <div>
+                            <label for="dsetor">Setor:</label>
+                            <input type="text" name="dsetor" id="dsetor" disabled>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Salvar">
+                    </div>
+                </form>
+            </dialog>
+        </main>
+    </div>
+    <script src="JavaScript/cadastro.js"></script>
+</body>
+</html>
